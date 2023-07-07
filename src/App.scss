@@ -27,39 +27,64 @@
       justify-content: center;
   
       #text {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
   
       #author {
         font-size: calc(5px + 2vmin);
-        margin-right: 0 0 0 15px;
+        margin-right: 2.5%;
+        margin-bottom: 15px;
         align-self: flex-end;
       }
       .inferiorBar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100%;
-        padding: 0 15px 0 15px;
-        margin: 5px
+        width: 95%;
+        margin: 10px;
+
+        #new-quote {
+          background-color: rgb(255, 255, 255);
+          border-radius: 3px;
+          border: 0px;
+          color: white;
+          padding: 0px;
+          width: 110px;
+          height: 50px;
+          font-size: 15px;
+          align-self: flex-end;
+          cursor: pointer;
+        }
+
+        #new-quote:hover {
+          color: lightgrey;
+        }
+
+        #tweet-quote {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          height: 50px;
+          width: 50px;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+        
+        #tweet-quote:hover {
+          color: lightgrey;
+
+        };
+        
+        #tweet-quote:active {
+          color: white
+        }
       }
     }
   }
 }
 
 
-#tweet-quote {
-  color: black;
-  text-decoration: none
-}
 
-#tweet-quote:hover {
-  color: turquoise;
-  text-decoration: underline;
-};
-
-#tweet-quote:active {
-  color: lightblue
-}
 
 

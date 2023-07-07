@@ -2,6 +2,8 @@ import React from 'react';
 import './App.scss';
 import quotes from './quotes.js';
 import COLORS_ARRAY from './colors.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter  } from '@fortawesome/free-brands-svg-icons'
 
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
@@ -10,7 +12,6 @@ class RandomQuoteMachine extends React.Component {
       randomNumber: null,
       quote: '',
       author: '',
-      backgroundColor: null,
       color: null,      
     }
     this.handleClick = this.handleClick.bind(this);
@@ -30,7 +31,6 @@ class RandomQuoteMachine extends React.Component {
       randomNumber: randomIndex,
       quote: quote,
       author: author,
-      backgroundColor: selectedColor,
       color: selectedColor,
     });
   }
@@ -45,7 +45,7 @@ class RandomQuoteMachine extends React.Component {
         <header className="App-header">
         </header>
       
-        <body className = "App-body" style ={{backgroundColor: this.state.backgroundColor}}>
+        <body className = "App-body" style ={{backgroundColor: this.state.color}}>
           <div id = "quote-box" style = {{color: this.state.color}}>
             <p id = "text">
               "{this.state.quote}"
@@ -53,14 +53,26 @@ class RandomQuoteMachine extends React.Component {
             <p id = "author">
               - {this.state.author}
             </p>
-            <span className = "inferiorBar">
-              <a id = "tweet-quote" href = {`https://twitter.com/intent/tweet?text=${this.state.quote} - ${this.state.author}`} target = "_blank" rel="noreferrer">T</a>
+
+            <div className = "inferiorBar">
+              <a 
+                id = "tweet-quote" 
+                href = {`https://twitter.com/intent/tweet?text=${this.state.quote} - ${this.state.author}`} 
+                target = "_blank" 
+                rel="noreferrer"
+                className = "button"
+                style = {{backgroundColor: this.state.color}} >
+                  <FontAwesomeIcon icon = {faTwitter} />
+              </a>
+
               <button 
                 id = "new-quote" 
-                onClick = {this.handleClick}>
+                onClick = {this.handleClick}
+                style = {{backgroundColor: this.state.color}}>
                   New quote
               </button>         
-            </span>
+            </div>
+
           </div>
         </body>        
       </div>
