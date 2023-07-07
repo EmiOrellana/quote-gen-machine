@@ -5,11 +5,10 @@ import quotes from './quotes.js';
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
     super(props);
-    let r = Math.floor(Math.random() * quotes.length);
     this.state = {
-      randomNumber: r,
-      quote: quotes[r].quote,
-      author: quotes[r].author,      
+      randomNumber: null,
+      quote: '',
+      author: '',      
     }
     this.handleClick = this.handleClick.bind(this);
 
