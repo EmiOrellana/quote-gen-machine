@@ -1,16 +1,65 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.App {  
   text-align: center;
-  .App-header {
-    background-color: #282c34;
+
+  .App-body {
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+
+    #quote-box {
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 20px;
+      width: 45%;
+      height: auto;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      #text {
+        margin-bottom: 20px;
+      }
+  
+      #author {
+        font-size: calc(5px + 2vmin);
+        margin-right: 0 0 0 15px;
+        align-self: flex-end;
+      }
+      .inferiorBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 15px 0 15px;
+        margin: 5px
+      }
+    }
   }
 }
 
+
+#tweet-quote {
+  color: black;
+  text-decoration: none
+}
+
+#tweet-quote:hover {
+  color: turquoise;
+  text-decoration: underline;
+};
+
+#tweet-quote:active {
+  color: lightblue
+}
 
 
