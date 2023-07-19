@@ -41,13 +41,12 @@ class RandomQuoteMachine extends React.Component {
   };
 
   render() {
+    const transition = "background-color 2s, color 2s, transform 0.3s ease-in-out"    
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
-      
-        <body className = "App-body" style ={{backgroundColor: this.state.color}}>
-          <div id = "quote-box" style = {{color: this.state.color}}>            
+              
+        <body className = "App-body" style ={{backgroundColor: this.state.color, transition}}>
+          <div id = "quote-box" style = {{color: this.state.color, transition}}>            
             <p id = "text">
               <FontAwesomeIcon icon = { faQuoteLeft } />
               {` ${this.state.quote} `}
@@ -64,14 +63,14 @@ class RandomQuoteMachine extends React.Component {
                 target = "_blank" 
                 rel="noreferrer"
                 className = "button"
-                style = {{backgroundColor: this.state.color}} >
+                style = {{backgroundColor: this.state.color, transition}} >
                   <FontAwesomeIcon icon = {faTwitter} />
               </a>
 
               <button 
                 id = "new-quote" 
                 onClick = {this.handleClick}
-                style = {{backgroundColor: this.state.color}}>
+                style = {{backgroundColor: this.state.color, transition}}>
                   New quote
               </button>         
             </div>
