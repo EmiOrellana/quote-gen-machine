@@ -4,6 +4,7 @@ import quotes from './quotes.js';
 import COLORS_ARRAY from './colors.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter  } from '@fortawesome/free-brands-svg-icons'
+import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
@@ -46,9 +47,11 @@ class RandomQuoteMachine extends React.Component {
         </header>
       
         <body className = "App-body" style ={{backgroundColor: this.state.color}}>
-          <div id = "quote-box" style = {{color: this.state.color}}>
+          <div id = "quote-box" style = {{color: this.state.color}}>            
             <p id = "text">
-              "{this.state.quote}"
+              <FontAwesomeIcon icon = { faQuoteLeft } />
+              {` ${this.state.quote} `}
+              <FontAwesomeIcon icon = { faQuoteRight } />
             </p>
             <p id = "author">
               - {this.state.author}

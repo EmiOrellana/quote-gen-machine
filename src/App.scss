@@ -1,5 +1,16 @@
+@font-face {
+  font-family: 'Oregano';
+  src: url('../src/fonts/Oregano-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Expletus';
+  src: url('../src/fonts/ExpletusSans-Regular.ttf');
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Expletus', 'Lucida Sans', sans-serif;
 }
 
 .App {  
@@ -35,11 +46,13 @@
       }
   
       #author {
+        font-family: 'Oregano', 'Lucida Sans', sans-serif;
         font-size: calc(5px + 2vmin);
         margin-right: 2.5%;
         margin-bottom: 15px;
         align-self: flex-end;
       }
+      
       .inferiorBar {
         display: flex;
         flex-direction: row;
