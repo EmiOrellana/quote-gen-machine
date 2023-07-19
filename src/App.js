@@ -13,7 +13,7 @@ class RandomQuoteMachine extends React.Component {
       randomNumber: null,
       quote: '',
       author: '',
-      color: null,      
+      color: null,    
     }
     this.handleClick = this.handleClick.bind(this);
 
