@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/quote-gen-machine/static/css/main.660c2e76.css",
+    "main.js": "/quote-gen-machine/static/js/main.2c8b7f43.js",
+    "static/js/787.f892a54d.chunk.js": "/quote-gen-machine/static/js/787.f892a54d.chunk.js",
+    "static/media/Oregano-Regular.ttf": "/quote-gen-machine/static/media/Oregano-Regular.585a6de7a01d6452960e.ttf",
+    "static/media/ExpletusSans-Regular.ttf": "/quote-gen-machine/static/media/ExpletusSans-Regular.d002d20611a001cb1198.ttf",
+    "index.html": "/quote-gen-machine/index.html",
+    "main.660c2e76.css.map": "/quote-gen-machine/static/css/main.660c2e76.css.map",
+    "main.2c8b7f43.js.map": "/quote-gen-machine/static/js/main.2c8b7f43.js.map",
+    "787.f892a54d.chunk.js.map": "/quote-gen-machine/static/js/787.f892a54d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.660c2e76.css",
+    "static/js/main.2c8b7f43.js"
+  ]
+}
