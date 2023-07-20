@@ -64,8 +64,59 @@
         @media screen and (max-width: 375px) {
           display: flex;
           flex-direction: column-reverse;
-        }    
+        }
 
+        .leftButtons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            
+            @media screen and (max-width: 375px) {
+              display: flex;
+              flex-direction: column-reverse;
+            }
+
+            #tweet-quote, #git-hub {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+              height: 50px;
+              width: 50px;
+              text-decoration: none;
+              border-radius: 3px;
+    
+              @media screen and (max-width: 375px) {
+                align-self: center;
+                width: 60%;
+              }        
+            }
+            
+            #tweet-quote:hover, #git-hub:hover {
+              transform: scale(1.12);
+              cursor: pointer;          
+            }
+            
+            #tweet-quote:active, #git-hub:active {
+              transform: scale(0.8);
+              transition: transform 0.2s;
+            }
+    
+            #git-hub {
+              margin-left: 5px;
+              border: 0px;
+    
+              #gitHubIcon {
+                width: fit-content;
+              }
+    
+              @media screen and (max-width: 375px) {
+                margin-bottom: 5px;
+                margin-left: 0px;
+              }
+            }
+        }
+ 
         #new-quote {
           background-color: rgb(255, 255, 255);
           border-radius: 3px;
@@ -92,32 +143,7 @@
         #new-quote:active {
           transform: scale(0.80);
           transition: transform 0.2s;
-        }
-
-        #tweet-quote {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: white;
-          height: 50px;
-          width: 50px;
-          text-decoration: none;
-          border-radius: 5px;
-
-          @media screen and (max-width: 375px) {
-            align-self: center;
-            width: 60%;
-          }
-        }
-        
-        #tweet-quote:hover {
-          transform: scale(1.12);          
-        };
-        
-        #tweet-quote:active {
-          transform: scale(0.8);
-          transition: transform 0.2s;
-        }
+        }        
       }
     }
   }

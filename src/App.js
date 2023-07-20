@@ -5,6 +5,7 @@ import COLORS_ARRAY from './colors.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter  } from '@fortawesome/free-brands-svg-icons'
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import gitHubIcon from "./fonts/github-48.svg"
 
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
@@ -57,15 +58,29 @@ class RandomQuoteMachine extends React.Component {
             </p>
 
             <div className = "inferiorBar">
-              <a 
-                id = "tweet-quote" 
-                href = {`https://twitter.com/intent/tweet?text=${this.state.quote} - ${this.state.author}`} 
-                target = "_blank" 
-                rel="noreferrer"
-                className = "button"
-                style = {{backgroundColor: this.state.color, transition}} >
-                  <FontAwesomeIcon icon = {faTwitter} />
-              </a>
+              <div className = "leftButtons">
+                <a 
+                  id = "tweet-quote" 
+                  href = {`https://twitter.com/intent/tweet?text=${this.state.quote} - ${this.state.author}`} 
+                  target = "_blank" 
+                  rel="noreferrer"
+                  className = "button"
+                  style = {{backgroundColor: this.state.color, transition}} 
+                  title = "Tweet Quote">
+                    <FontAwesomeIcon icon = {faTwitter} />
+                </a>
+                
+                <button 
+                  id = "git-hub"
+                  onClick={
+                    () =>
+                    window.open('https://github.com/EmiOrellana/quote-gen-machine', '_blank')
+                  }
+                  style = {{backgroundColor: this.state.color, transition}}
+                  title = "See GitHub Repository">
+                    <img id = "gitHubIcon" src={gitHubIcon} alt="GitHub Icon" />
+                </button> 
+              </div>
 
               <button 
                 id = "new-quote" 
