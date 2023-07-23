@@ -5,7 +5,7 @@ import COLORS_ARRAY from './colors.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter  } from '@fortawesome/free-brands-svg-icons'
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-import gitHubIcon from "./fonts/github-48.svg"
+import gitHubIcon from "../src/fonts/github-48.svg"
 
 class RandomQuoteMachine extends React.Component {
   constructor(props) {
